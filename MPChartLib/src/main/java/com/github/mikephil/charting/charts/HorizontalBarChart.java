@@ -12,7 +12,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.highlight.HorizontalBarHighlighter;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
-import com.github.mikephil.charting.renderer.HorizontalBarChartRenderer;
+import com.github.mikephil.charting.renderer.HorizontalBarChartRender;
 import com.github.mikephil.charting.renderer.XAxisRendererHorizontalBarChart;
 import com.github.mikephil.charting.renderer.YAxisRendererHorizontalBarChart;
 import com.github.mikephil.charting.utils.HorizontalViewPortHandler;
@@ -50,7 +50,7 @@ public class HorizontalBarChart extends BarChart {
         mLeftAxisTransformer = new TransformerHorizontalBarChart(mViewPortHandler);
         mRightAxisTransformer = new TransformerHorizontalBarChart(mViewPortHandler);
 
-        mRenderer = new HorizontalBarChartRenderer(this, mAnimator, mViewPortHandler);
+        mRenderer = new HorizontalBarChartRender(this, mAnimator, mViewPortHandler);
         setHighlighter(new HorizontalBarHighlighter(this));
 
         mAxisRendererLeft = new YAxisRendererHorizontalBarChart(mViewPortHandler, mAxisLeft, mLeftAxisTransformer);
